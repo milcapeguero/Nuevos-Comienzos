@@ -2,37 +2,41 @@
 
 Qué se conserva del diseño y qué no:
 
-| Se conserva (como imagen) | Se adapta (formato nativo de Wix) |
+| Se conserva (como imagen) | Se adapta (texto nativo de Wix) |
 | --- | --- |
-| Portada con título, logo y cintas | Títulos de sección → Título 2 |
-| Panel de la idea central | Puntos numerados → Título 3 |
-| Preguntas finales | Citas de los puntos → Cita |
-| 10 tarjetas de frases (también sirven para redes) | Pasajes, aplicaciones y definiciones → listas |
+| Portada con título, logo y cintas | Párrafos, listas y citas |
+| Banda azul de cada sección | Negritas y enlaces |
+| Banda de cada punto (número grande + título) | |
+| Panel de la idea central y preguntas finales | |
+| 10 tarjetas de frases (también sirven para redes) | |
 
-Se pierde: los fondos por sección, las tarjetas de pasajes, los números grandes y la cabecera fija de cada punto. El tema de tu sitio en Wix decide la tipografía y los colores del texto.
+Se pierde: las tarjetas de pasajes y la cabecera fija de cada punto. El texto usa la tipografía y los colores del tema de tu sitio en Wix.
 
 ## Archivos
 
 ```
-wix/la-mejor-inversion/01-portada.png            1920×1080  → portada del post
-wix/la-mejor-inversion/02-idea-central.png       1600×900   → dentro del post
-wix/la-mejor-inversion/03-pregunta-personal.png  1600×900   → dentro del post
-wix/la-mejor-inversion/04-pregunta-final.png     1600×900   → dentro del post
-wix/la-mejor-inversion/frase-01 … frase-10.png   1080×1080  → galería del post y redes
-wix/la-mejor-inversion-post.html                 el texto con formato para pegar
+wix/la-mejor-inversion/01-portada.png                      1920×1080  portada del post
+wix/la-mejor-inversion/s1-pasajes … s5-cierre.png          1600×420   5 bandas de sección
+wix/la-mejor-inversion/punto-01 … punto-15.png             1600×340   15 bandas de punto
+wix/la-mejor-inversion/02-idea-central.png                 1600×900   panel
+wix/la-mejor-inversion/03-pregunta-personal.png            1600×900   panel
+wix/la-mejor-inversion/04-pregunta-final.png               1600×900   panel
+wix/la-mejor-inversion/frase-01 … frase-10.png             1080×1080  galería y redes
+wix/la-mejor-inversion-post.html                           el texto para pegar
 ```
 
 ## Pasos
 
-1. **Crea el post.** En Wix: Blog → Crear nueva entrada. Escribe el título «La mejor inversión».
-2. **Portada.** Sube `01-portada.png` como imagen de portada.
-3. **Pega el texto.**
+1. **Sube todas las imágenes de una vez** a la biblioteca de medios de Wix (Medios → Subir). Así luego solo las eliges.
+2. **Crea el post.** Blog → Crear nueva entrada. Escribe el título «La mejor inversión» y sube `01-portada.png` como imagen de portada.
+3. **Pega el texto desde la página abierta, no desde el código.**
    - Abre `la-mejor-inversion-post.html` en el navegador (doble clic).
-   - Selecciona todo (Ctrl/Cmd + A), copia y pega en el cuerpo del post.
-   - Los títulos, las listas, las citas y las negritas se conservan. Si Wix mantiene alguna fuente o tamaño raro, selecciona el texto y pulsa «Borrar formato».
-4. **Coloca las imágenes.** En el texto hay líneas amarillas `[IMAGEN: …]`. Para cada una:
-   - Pon el cursor en esa línea → botón **+** → **Imagen** (o **Galería** para las frases) → sube el archivo indicado.
-   - Copia el «Texto alternativo» que aparece en la línea al campo de texto alternativo de la imagen.
+   - Selecciona todo con Ctrl/Cmd + A, copia y pega en el cuerpo del post.
+   - **No pegues el código fuente.** Si lo haces, Wix lo convierte en un bloque «Editar HTML» y el texto se ve sin estilo, en Times.
+   - Si queda alguna fuente o tamaño raro, selecciona el texto y pulsa «Borrar formato».
+4. **Coloca las imágenes.** El texto trae 25 líneas amarillas `[IMAGEN: …]`. Para cada una:
+   - Pon el cursor en esa línea → **+** → **Imagen** (o **Galería** para las 10 frases) → elige el archivo indicado.
+   - Copia el «Texto alternativo» de la línea al campo de texto alternativo de la imagen.
    - Borra la línea amarilla.
 5. **Revisa** la vista previa en móvil y en escritorio.
 6. **Ajustes finales:** categoría («Bajo nueva administración»), etiquetas, extracto y fecha. Luego publica.

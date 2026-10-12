@@ -19,6 +19,9 @@ def inner(el):
 def marker(archivo, nota):
     out.append(f'<p style="background:#fff3b0"><strong>[IMAGEN: {carpeta}/{archivo}]</strong> {nota}</p>')
 
+BANDAS = {"pasajes": "s1-pasajes.png", "puntos": "s2-puntos.png", "aplicacion": "s3-aplicacion.png",
+          "frases": "s4-frases.png", "cierre": "s5-cierre.png"}
+
 hero = soup.select_one(".nc-hero")
 marker("01-portada.png", "Súbela como imagen de portada del post y bórrala del cuerpo.")
 metas = {m.dt.get_text(strip=True): m.dd.get_text(strip=True) for m in hero.select(".nc-meta")}
@@ -27,7 +30,10 @@ out.append(f'<p><strong>Serie:</strong> {metas["Serie"]}<br><strong>Predicadora:
 for sec in soup.select("main > section"):
     sid = sec["id"]
     h2 = sec.select_one("h2")
-    out.append(f"<h2>{txt(h2)}</h2>")
+    if sid in BANDAS:
+        marker(BANDAS[sid], "Banda de sección. Texto alternativo: " + txt(h2))
+    else:
+        out.append(f"<h2>{txt(h2)}</h2>")
 
     if sid == "pasajes":
         out.append("<ul>")
@@ -44,7 +50,8 @@ for sec in soup.select("main > section"):
     elif sid == "puntos":
         for li in sec.select(".nc-point"):
             num = li.select_one(".nc-point__num").get_text(strip=True).lstrip("0")
-            out.append(f'<h3>{num}. {txt(li.select_one(".nc-point__title"))}</h3>')
+            titulo = txt(li.select_one(".nc-point__title"))
+            marker(f"punto-{int(num):02d}.png", f"Banda del punto. Texto alternativo: {num}. {titulo}")
             for el in li.select_one(".nc-point__body").find_all(recursive=False):
                 if el.name == "p":
                     out.append(f"<p>{inner(el)}</p>")

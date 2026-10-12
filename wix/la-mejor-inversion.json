@@ -3,7 +3,12 @@
   "titulo": "La mejor inversión",
   "predicadora": "Doris Guzmán",
   "serie": "Bajo nueva administración",
-  "portada": { "lineas": ["La mejor", "inversión"] },
+  "portada": {
+    "lineas": [
+      "La mejor",
+      "inversión"
+    ]
+  },
   "paneles": [
     {
       "archivo": "02-idea-central",
@@ -25,15 +30,126 @@
     }
   ],
   "frases": [
-    { "t": "¿Qué estás haciendo con lo que Dios depositó en ti?", "claro": true },
-    { "t": "Su gracia nos capacita mucho más allá de nuestras limitaciones." },
-    { "t": "Compararte es la ruta perfecta para desviarte del propósito de Dios." },
-    { "t": "El diseño con el que Él te hizo es el que va a responder a eso que Él quiere hacer." },
-    { "t": "A veces el Padre necesita ver la disposición de nosotros para poder entregarte la asignación." },
-    { "t": "Nuestro diseño responde a una necesidad en el plan del Señor." },
-    { "t": "Ellas están donde las cosas ocurren, pero no son parte de que las cosas ocurran." },
-    { "t": "Deja de mirar a los lados y comprende que tú tienes todo lo necesario." },
-    { "t": "Podemos usar nuestros dones, talentos y habilidades para construir nuestro propio reino o podemos usarlo para el servicio del reino de los cielos. ¿En qué te vas a invertir?" },
-    { "t": "La más grande inversión ya Él la hizo cuando envió a Su único Hijo a morir por nosotros en la cruz.", "claro": true }
+    {
+      "t": "¿Qué estás haciendo con lo que Dios depositó en ti?",
+      "claro": true
+    },
+    {
+      "t": "Su gracia nos capacita mucho más allá de nuestras limitaciones."
+    },
+    {
+      "t": "Compararte es la ruta perfecta para desviarte del propósito de Dios."
+    },
+    {
+      "t": "El diseño con el que Él te hizo es el que va a responder a eso que Él quiere hacer."
+    },
+    {
+      "t": "A veces el Padre necesita ver la disposición de nosotros para poder entregarte la asignación."
+    },
+    {
+      "t": "Nuestro diseño responde a una necesidad en el plan del Señor."
+    },
+    {
+      "t": "Ellas están donde las cosas ocurren, pero no son parte de que las cosas ocurran."
+    },
+    {
+      "t": "Deja de mirar a los lados y comprende que tú tienes todo lo necesario."
+    },
+    {
+      "t": "Podemos usar nuestros dones, talentos y habilidades para construir nuestro propio reino o podemos usarlo para el servicio del reino de los cielos. ¿En qué te vas a invertir?"
+    },
+    {
+      "t": "La más grande inversión ya Él la hizo cuando envió a Su único Hijo a morir por nosotros en la cruz.",
+      "claro": true
+    }
+  ],
+  "secciones": [
+    {
+      "archivo": "s1-pasajes",
+      "etiqueta": "Para abrir la Biblia",
+      "titulo": "Pasajes clave utilizados"
+    },
+    {
+      "archivo": "s2-puntos",
+      "etiqueta": "Quince ideas para meditar",
+      "titulo": "Puntos principales del mensaje"
+    },
+    {
+      "archivo": "s3-aplicacion",
+      "etiqueta": "Para vivirlo esta semana",
+      "titulo": "Aplicación práctica para la vida diaria"
+    },
+    {
+      "archivo": "s4-frases",
+      "etiqueta": "Para guardar y compartir",
+      "titulo": "Frases clave o citas impactantes"
+    },
+    {
+      "archivo": "s5-cierre",
+      "etiqueta": "Para terminar",
+      "titulo": "Cierre"
+    }
+  ],
+  "puntos": [
+    {
+      "n": 1,
+      "titulo": "Todos hemos recibido algo de parte de Dios"
+    },
+    {
+      "n": 2,
+      "titulo": "Dones, talentos y habilidades no son exactamente lo mismo"
+    },
+    {
+      "n": 3,
+      "titulo": "Dios no solamente llama: también capacita"
+    },
+    {
+      "n": 4,
+      "titulo": "Lo pequeño en nuestras manos puede multiplicarse en las manos de Dios"
+    },
+    {
+      "n": 5,
+      "titulo": "Nuestra vida siempre está siendo invertida en algo"
+    },
+    {
+      "n": 6,
+      "titulo": "La primera característica de una buena inversión es que apunta a Cristo"
+    },
+    {
+      "n": 7,
+      "titulo": "No fuimos diseñados para compararnos, sino para complementarnos"
+    },
+    {
+      "n": 8,
+      "titulo": "Nuestro don encuentra propósito cuando se pone al servicio de los demás"
+    },
+    {
+      "n": 9,
+      "titulo": "Abraza tu diseño: no necesitas la armadura de otra persona"
+    },
+    {
+      "n": 10,
+      "titulo": "Hay cosas que descubrimos solamente cuando nos involucramos"
+    },
+    {
+      "n": 11,
+      "titulo": "Somos muchos miembros, pero un solo cuerpo"
+    },
+    {
+      "n": 12,
+      "titulo": "Dios es la fuente: nosotros somos recipientes"
+    },
+    {
+      "n": 13,
+      "titulo": "No basta con estar cerca del propósito: hay que participar de él"
+    },
+    {
+      "n": 14,
+      "titulo": "El miedo y la inseguridad no deben determinar cuánto entregamos"
+    },
+    {
+      "n": 15,
+      "titulo": "Para quien todavía está lejos, la primera inversión es venir a Cristo"
+    }
   ]
 }

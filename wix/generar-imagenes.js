@@ -1,4 +1,4 @@
-// Genera las imágenes del post de Wix (portada, paneles y frases) a partir de un JSON.
+// Genera las imágenes del post de Wix (portada, bandas de sección y de punto, paneles y frases) a partir de un JSON.
 // Uso:  node wix/generar-imagenes.js wix/la-mejor-inversion.json
 const fs = require('fs');
 const path = require('path');
@@ -74,6 +74,29 @@ function panel(p) {
   </div>` };
 }
 
+function seccion(sc) {
+  const w = 1600, h = 420;
+  const n = sc.titulo.length;
+  const tam = n < 26 ? 150 : n < 34 ? 128 : 104;
+  return { w, h, name: sc.archivo, html: `
+  <div class="card nc-on-blue" style="width:${w}px;height:${h}px;padding:70px 110px;justify-content:center;gap:26px">
+    ${rib('right:-6%;top:-70%;width:700px;height:790px;opacity:.6')}
+    <div class="et" style="font-size:22px">${esc(sc.etiqueta)}</div>
+    <h2 class="nc-display" style="font-size:${tam}px;line-height:1.06;margin:0;max-width:1200px">${esc(sc.titulo)}</h2>
+  </div>` };
+}
+
+function punto(p) {
+  const w = 1600, h = 340;
+  const n = p.titulo.length;
+  const tam = n < 40 ? 76 : n < 62 ? 64 : 54;
+  return { w, h, name: 'punto-' + String(p.n).padStart(2, '0'), html: `
+  <div class="card" style="width:${w}px;height:${h}px;padding:0 90px;background:var(--nc-gris);flex-direction:row;align-items:center;gap:70px;color:var(--nc-grafito)">
+    <div class="nc-display" style="font-weight:300;font-size:230px;line-height:1;color:transparent;-webkit-text-stroke:3px var(--nc-neo);min-width:260px;font-variant-numeric:lining-nums">${String(p.n).padStart(2, '0')}</div>
+    <h3 class="nc-display" style="font-size:${tam}px;line-height:1.08;margin:0;flex:1">${esc(p.titulo)}</h3>
+  </div>` };
+}
+
 function frase(f, i) {
   const w = 1080, h = 1080;
   const n = f.t.length;
@@ -89,7 +112,7 @@ function frase(f, i) {
 }
 
 (async () => {
-  const cards = [portada(), ...cfg.paneles.map(panel), ...cfg.frases.map(frase)];
+  const cards = [portada(), ...(cfg.secciones || []).map(seccion), ...(cfg.puntos || []).map(punto), ...cfg.paneles.map(panel), ...cfg.frases.map(frase)];
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   for (const c of cards) {
     const page = await browser.newPage({ viewport: { width: c.w, height: c.h }, deviceScaleFactor: 1 });
