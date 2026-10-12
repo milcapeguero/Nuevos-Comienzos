@@ -497,14 +497,16 @@
     });
   }
 
-  // Compartir
+  // Compartir. Dentro de un marco (p. ej. Wix) se comparte NC_SHARE_URL; si no se define, se oculta el botón.
   var btn = document.getElementById("compartir");
   var txt = document.getElementById("compartir-txt");
+  var url = window.NC_SHARE_URL || location.href;
+  if (window.self !== window.top && !window.NC_SHARE_URL) btn.hidden = true;
   btn.addEventListener("click", function () {
-    var data = { title: document.title, url: location.href };
+    var data = { title: document.title, url: url };
     if (navigator.share) { navigator.share(data).catch(function () {}); return; }
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(location.href).then(function () {
+      navigator.clipboard.writeText(url).then(function () {
         txt.textContent = "Enlace copiado";
         setTimeout(function () { txt.textContent = "Comparte este mensaje"; }, 2400);
       }).catch(function () {});
